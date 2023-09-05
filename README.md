@@ -55,11 +55,11 @@ DUPEBUTTON.Text = "START"
 DUPEBUTTON.TextColor3 = Color3.fromRGB(0, 0, 0)
 DUPEBUTTON.TextSize = 35.000
 DUPEBUTTON.MouseButton1Down:Connect(function()
-        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  Options[Options.Current])
 	STATUSSTART.Visible = true
 	STATUSSTART.Active = true
 	STATUSSTOPLOSS.Visible = false
 	STATUSSTOPLOSS.Active = false
+        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  Options[Options.Current])
 end)
 
 UICorner_2.CornerRadius = UDim.new(0.300000012, 0)
@@ -77,11 +77,12 @@ UNDOBUTTON.Text = "STOP"
 UNDOBUTTON.TextColor3 = Color3.fromRGB(0, 0, 0)
 UNDOBUTTON.TextSize = 35.000
 UNDOBUTTON.MouseButton1Down:Connect(function()
-        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme", Options.Undo)
 	STATUSSTART.Visible = false
 	STATUSSTART.Active = false
 	STATUSSTOPLOSS.Visible = true
 	STATUSSTOPLOSS.Active = true
+        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme", Options.Undo)
+
 end)
 
 UICorner_3.CornerRadius = UDim.new(0.300000012, 0)
