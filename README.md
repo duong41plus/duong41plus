@@ -55,7 +55,7 @@ DUPEBUTTON.Text = "START"
 DUPEBUTTON.TextColor3 = Color3.fromRGB(0, 0, 0)
 DUPEBUTTON.TextSize = 35.000
 DUPEBUTTON.MouseButton1Down:Connect(function()
-	game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  "\192")
+        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme",  Options[Options.Current])
 	STATUSSTART.Visible = true
 	STATUSSTART.Active = true
 	STATUSSTOPLOSS.Visible = false
@@ -77,7 +77,7 @@ UNDOBUTTON.Text = "STOP"
 UNDOBUTTON.TextColor3 = Color3.fromRGB(0, 0, 0)
 UNDOBUTTON.TextSize = 35.000
 UNDOBUTTON.MouseButton1Down:Connect(function()
-	game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme", "Naruto")
+        game:GetService("ReplicatedStorage").Remote.SetDungeonSetting:FireServer("Theme", Options.Undo)
 	STATUSSTART.Visible = false
 	STATUSSTART.Active = false
 	STATUSSTOPLOSS.Visible = true
